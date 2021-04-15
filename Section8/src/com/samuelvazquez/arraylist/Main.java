@@ -2,6 +2,9 @@ package com.samuelvazquez.arraylist;
 
 import java.util.ArrayList;
 
+/*
+Most common methods for ArrayList in Java
+ */
 public class Main {
     public static void main(String[] args) {
         //How to declare an ArrayList in Java
@@ -29,8 +32,6 @@ public class Main {
         //2. Getting the size of the list
         int size = cars.size();
         System.out.println("Size of the list: " + size);
-
-        System.out.println("\n" + cars.toString());
 
         //3. Removing elements from the list
         //3.1 Remove the specified object from the list, by object or index

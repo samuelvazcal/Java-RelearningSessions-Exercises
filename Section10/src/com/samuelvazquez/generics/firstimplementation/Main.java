@@ -1,4 +1,4 @@
-package com.samuelvazquez.generics.firstapproach;
+package com.samuelvazquez.generics.firstimplementation;
 
 import java.util.ArrayList;
 

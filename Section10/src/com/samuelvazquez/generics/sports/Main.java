@@ -16,7 +16,7 @@ public class Main {
 		Team<BaseballPlayer> baseballTeam = new Team<>("Chicago Cubs");
 		baseballTeam.addPlayer(pat);
 
-		//Team<String> brokenTeam = new Team<>("this won't work");
+		//Team<String> brokenTeam = new Team<>("thi s won't work");
 		//brokenTeam.addPlayer("no-one");
 
 		Team<SoccerPlayer> soccerTeam = new Team<>("Java Devs FC");

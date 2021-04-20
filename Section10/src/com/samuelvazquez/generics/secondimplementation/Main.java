@@ -20,15 +20,24 @@ public class Main {
 		GroupShape<Circle> circles = new GroupShape<>("Set of circles");
 		circles.addFigure(circle1);
 		circles.addFigure(circle2);
+		circles.addFigure(circle3);
 
 		GroupShape<Rectangle> rectangles = new GroupShape<>("Set of rectangles");
 		rectangles.addFigure(rectangle1);
 		GroupShape<Triangle> triangles = new GroupShape<>("Set of triangles");
 		triangles.addFigure(triangle1);
+		triangles.addFigure(triangle2);
 
 		System.out.println("size of circles: " + circles.getSize());
 
-		for(Circle x : circles) {
+		//it can work for any subclass of Shape; circles, rectangles, triangles
+		System.out.println("looping through circles set: ");
+		for(Shape x : circles) {
+			System.out.println(x.getFigureName());
+		}
+		System.out.println("looping through triangles set: ");
+
+		for(Shape x : triangles) {
 			System.out.println(x.getFigureName());
 		}
 	}

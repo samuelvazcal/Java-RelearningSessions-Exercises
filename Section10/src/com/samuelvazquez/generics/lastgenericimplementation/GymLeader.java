@@ -2,7 +2,7 @@ package com.samuelvazquez.generics.lastgenericimplementation;
 
 import java.util.ArrayList;
 
-//Now, it will work for any tpe of Pokemon
+//Now, it will work for any type, for example Pokemon
 //For this case, T stands for any type of Pokemon
 public class GymLeader<T> {
 	private String leaderName;

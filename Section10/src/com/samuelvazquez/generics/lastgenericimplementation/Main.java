@@ -16,6 +16,11 @@ public class Main {
 		GymLeader<WaterPokemon> ceruleanLeader = new GymLeader<WaterPokemon>("Misty");
 		GymLeader<GrassPokemon> celadonLeader = new GymLeader<GrassPokemon>("Erika");
 		GymLeader<FirePokemon> cinnabarLeader = new GymLeader<FirePokemon>("Blaine");
+		//But right now, the generic class still has some issues. E.g.
+		GymLeader<String> unknownLeader = new GymLeader<String>("???");
+		GymLeader<Integer> unknownLeader2 = new GymLeader<Integer>("??");
+		//I need to define bounded type parameters to ensure type safety.
+		// I don't want to use unexpected types of values such as String, Integer, etc.
 
 		System.out.println("Adding pokemon to Cerulean Leader " + ceruleanLeader.getLeaderName());
 		ceruleanLeader.addPokemon(starmie);
@@ -36,8 +41,6 @@ public class Main {
 		//How I can restrict an specific type of pokemon for specific gym leaders?
 		//1. I can define a new class that handles this situation, but it means repetitive code
 		//2. What about implement a Generic Class?
-
-
 
 
 	}

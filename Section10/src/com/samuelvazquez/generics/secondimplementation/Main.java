@@ -1,12 +1,5 @@
 package com.samuelvazquez.generics.secondimplementation;
 
-import com.samuelvazquez.generics.sports.Team;
-
-import java.util.ArrayList;
-import java.util.Currency;
-import java.util.List;
-
-
 public class Main {
 	public static void main(String[] args) {
 		Circle circle1 = new Circle("balloon");
@@ -41,12 +34,5 @@ public class Main {
 			System.out.println(x.getFigureName());
 		}
 	}
-
-//	public static void printList(GroupShape list) {
-//		for(Shape x : list) {
-//			System.out.println(x);
-//		}
-//	}
-
 
 }

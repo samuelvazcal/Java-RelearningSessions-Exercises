@@ -17,8 +17,8 @@ public class Main {
 		GymLeader<GrassPokemon> celadonLeader = new GymLeader<GrassPokemon>("Erika");
 		GymLeader<FirePokemon> cinnabarLeader = new GymLeader<FirePokemon>("Blaine");
 		//But right now, the generic class still has some issues. E.g.
-		GymLeader<String> unknownLeader = new GymLeader<String>("???");
-		GymLeader<Integer> unknownLeader2 = new GymLeader<Integer>("??");
+		//GymLeader<String> unknownLeader = new GymLeader<String>("???");
+		//GymLeader<Integer> unknownLeader2 = new GymLeader<Integer>("??");
 		//I need to define bounded type parameters to ensure type safety.
 		// I don't want to use unexpected types of values such as String, Integer, etc.
 
@@ -29,10 +29,6 @@ public class Main {
 		//invalid type of Pokemon for Cerulean leader
 		//ceruleanLeader.addPokemon(arcanine);
 
-		System.out.println("Adding pokemon to Celadon Leader " + cinnabarLeader.getLeaderName());
-		celadonLeader.addPokemon(exeggutor);
-		celadonLeader.addPokemon(vileplume);
-
 		System.out.println("Adding pokemon to Cinnabar Leader " + cinnabarLeader.getLeaderName());
 		cinnabarLeader.addPokemon(arcanine);
 		cinnabarLeader.addPokemon(magmar);
@@ -42,6 +38,9 @@ public class Main {
 		//1. I can define a new class that handles this situation, but it means repetitive code
 		//2. What about implement a Generic Class?
 
+		System.out.println("Adding pokemon to Celadon Leader " + cinnabarLeader.getLeaderName());
+		celadonLeader.addPokemon(exeggutor);
+		celadonLeader.addPokemon(vileplume);
 
 	}
 }

@@ -12,15 +12,26 @@ public class Main {
 		FirePokemon magmar = new FirePokemon("magmar");
 		FirePokemon ninetales = new FirePokemon("ninetales");
 
-		GymLeader ceruleanLeader = new GymLeader("Misty");
-		GymLeader celadonLeader = new GymLeader("Erika");
-		GymLeader cinnabarLeader = new GymLeader("Blaine");
+		//Now, we can specify what type of Pokemon our respective leader should have
+		GymLeader<WaterPokemon> ceruleanLeader = new GymLeader<WaterPokemon>("Misty");
+		GymLeader<GrassPokemon> celadonLeader = new GymLeader<GrassPokemon>("Erika");
+		GymLeader<FirePokemon> cinnabarLeader = new GymLeader<FirePokemon>("Blaine");
 
 		System.out.println("Adding pokemon to Cerulean Leader " + ceruleanLeader.getLeaderName());
-		celadonLeader.addPokemon(starmie);
+		ceruleanLeader.addPokemon(starmie);
+		ceruleanLeader.addPokemon(psyduck);
+		ceruleanLeader.addPokemon(dewgong);
+		//invalid type of Pokemon for Cerulean leader
+		//ceruleanLeader.addPokemon(arcanine);
+
+		System.out.println("Adding pokemon to Celadon Leader " + cinnabarLeader.getLeaderName());
+		celadonLeader.addPokemon(exeggutor);
 		celadonLeader.addPokemon(vileplume);
-		celadonLeader.addPokemon(ninetales);
-		celadonLeader.addPokemon("Ssss");
+
+		System.out.println("Adding pokemon to Cinnabar Leader " + cinnabarLeader.getLeaderName());
+		cinnabarLeader.addPokemon(arcanine);
+		cinnabarLeader.addPokemon(magmar);
+		cinnabarLeader.addPokemon(ninetales);
 		//Misty is a water trainer, she only use water type pokemon in gym battles!
 		//How I can restrict an specific type of pokemon for specific gym leaders?
 		//1. I can define a new class that handles this situation, but it means repetitive code

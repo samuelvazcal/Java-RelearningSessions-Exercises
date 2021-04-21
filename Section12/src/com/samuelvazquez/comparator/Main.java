@@ -1,4 +1,4 @@
-package com.samuelvazquez.comparator.firstexample;
+package com.samuelvazquez.comparator;
 
 import java.util.ArrayList;
 import java.util.Collections;

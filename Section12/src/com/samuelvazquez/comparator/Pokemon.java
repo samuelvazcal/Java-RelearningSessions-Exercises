@@ -1,4 +1,4 @@
-package com.samuelvazquez.comparator.firstexample;
+package com.samuelvazquez.comparator;
 
 //Comparable<Hero> to sort a list of Hero based on one of its data members
 public class Pokemon implements Comparable<Pokemon>{

@@ -1,16 +1,18 @@
-package com.samuelvazquez.comparable.secondexample;
+package com.samuelvazquez.comparator.firstexample;
 
 //Comparable<Hero> to sort a list of Hero based on one of its data members
 public class Pokemon implements Comparable<Pokemon>{
 	private int id;
 	private String name;
 	private double weight;
+	private double height;
 
 	//Constructor
-	public Pokemon(int id, String name, double weight) {
+	public Pokemon(int id, String name, double weight, double height) {
 		this.id = id;
 		this.name = name;
 		this.weight = weight;
+		this.height = height;
 	}
 
 	//Getter methods for accessing private data
@@ -26,22 +28,12 @@ public class Pokemon implements Comparable<Pokemon>{
 		return weight;
 	}
 
-	/*Comparing based on field 'id'
-	@Override
-	public int compareTo(Pokemon pok) {
-		return this.id - pok.id;
+	public double getHeight() {
+		return height;
 	}
 
-
-	/*Comparing based on weight (ascending order)
 	@Override
-	public int compareTo(Pokemon pok) {
-		return Double.compare(this.weight,pok.weight);
-	}
-	 */
-
-	@Override
-	public int compareTo(Pokemon pok) {
-		return this.name.compareTo(pok.name);
+	public int compareTo(Pokemon pokemon) {
+		return Double.compare(this.height,pokemon.height);
 	}
 }

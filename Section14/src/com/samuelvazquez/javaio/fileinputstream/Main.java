@@ -28,5 +28,17 @@ public class Main {
 		} catch (IOException e) {
 			System.out.println(e);
 		}
+
+		System.out.println("again, but now a new file...");
+		try {
+			FileInputStream fin = new FileInputStream("song.txt");
+			System.out.print((char)fin.read());
+			int i = 0;
+			while((i = fin.read())!=-1) {
+				System.out.print((char)i);
+			}
+		} catch (IOException e) {
+			System.out.println(e);
+		}
 	}
 }

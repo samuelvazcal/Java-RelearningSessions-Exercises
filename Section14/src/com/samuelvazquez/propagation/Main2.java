@@ -14,7 +14,7 @@ public class Main2 {
 
 class TestExceptionPropagation2 {
 	void m() {
-		throw new IOException("device error");//checked exception
+		// throw new IOException("device error");//checked exception can be propagated
 	}
 
 	void n() {

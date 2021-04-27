@@ -1,4 +1,4 @@
-package com.samuelvazquez.javaio.fileoutputstream;
+package com.samuelvazquez.javaio.inandout;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

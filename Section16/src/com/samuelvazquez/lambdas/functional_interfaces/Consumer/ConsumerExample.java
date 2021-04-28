@@ -1,4 +1,4 @@
-package com.samuelvazquez.lambdas.functional_interfaces;
+package com.samuelvazquez.lambdas.functional_interfaces.Consumer;
 
 import java.util.ArrayList;
 import java.util.Arrays;

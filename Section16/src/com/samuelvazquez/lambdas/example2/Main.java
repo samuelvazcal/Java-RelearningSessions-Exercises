@@ -1,4 +1,4 @@
-package com.samuelvazquez.lambdas.second_example;
+package com.samuelvazquez.lambdas.example2;
 
 import java.util.ArrayList;
 

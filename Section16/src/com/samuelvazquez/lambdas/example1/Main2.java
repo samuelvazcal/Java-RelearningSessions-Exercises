@@ -1,4 +1,4 @@
-package com.samuelvazquez.lambdas.first_example;
+package com.samuelvazquez.lambdas.example1;
 
 public class Main2 {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.samuelvazquez.lambdas.third_example;
+package com.samuelvazquez.lambdas.example3;
 
 
 // operation is implemented using lambda expressions

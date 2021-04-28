@@ -1,4 +1,4 @@
-package com.samuelvazquez.lambdas;
+package com.samuelvazquez.lambdas.first_example;
 
 
 // Java program to demonstrate lambda expressions

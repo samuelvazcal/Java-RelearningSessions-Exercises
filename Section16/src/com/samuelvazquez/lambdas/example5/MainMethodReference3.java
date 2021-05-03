@@ -2,6 +2,7 @@ package src.com.samuelvazquez.lambdas.example5;
 
 import java.util.Collections;
 
+// Constructor References
 public class MainMethodReference3 {
     public static void main(String[] args) {
         //lambda expression referencing a constructor of a class

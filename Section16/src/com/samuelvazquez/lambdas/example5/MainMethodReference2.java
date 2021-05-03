@@ -1,5 +1,6 @@
 package src.com.samuelvazquez.lambdas.example5;
 
+// Instance Method References
 public class MainMethodReference2 {
     public static void main(String[] args) {
         StringConverter stringConverter = new StringConverter();

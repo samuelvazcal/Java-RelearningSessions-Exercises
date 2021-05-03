@@ -1,5 +1,6 @@
 package src.com.samuelvazquez.lambdas.example5;
 
+//Static Method References & Parameter Method Reference
 public class MainMethodReference {
     public static void main(String[] args) {
         int res1 = MyClass.doFind("Mexico","xi");

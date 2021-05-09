@@ -3,6 +3,7 @@ package src.com.samuelvazquez.streams;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamsCourse {
     public static void main(String[] args) {
@@ -23,5 +24,10 @@ public class StreamsCourse {
                 someBingoNumbers.stream().map(String::toUpperCase).filter(s -> s.startsWith("G")).collect(Collectors.toList());
         System.out.println(sortedList);
 
+        Stream<String> ioNumberStream = Stream.of("I26","I17","I29","O71");
+        Stream<String> inNumberStream = Stream.of("N40","N36","I26","I17","I29","O71");
+        Stream<String> concatStream = Stream.concat(ioNumberStream,inNumberStream);
+        System.out.println("==========================");
+        System.out.println(concatStream.distinct().peek(System.out::println).count());
     }
 }

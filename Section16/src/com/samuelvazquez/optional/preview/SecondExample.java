@@ -1,4 +1,4 @@
-package src.com.samuelvazquez.optional;
+package src.com.samuelvazquez.optional.preview;
 
 //Keeping a Check on the arguments of a method
 public class SecondExample {

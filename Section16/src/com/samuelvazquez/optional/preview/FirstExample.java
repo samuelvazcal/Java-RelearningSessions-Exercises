@@ -1,4 +1,4 @@
-package src.com.samuelvazquez.optional;
+package src.com.samuelvazquez.optional.preview;
 
 //String comparison with literals
 public class FirstExample {

@@ -1,4 +1,4 @@
-package src.com.samuelvazquez.optional;
+package src.com.samuelvazquez.optional.preview;
 
 // Use of Ternary Operator
 public class ThirdExample {
@@ -12,7 +12,7 @@ public class ThirdExample {
 
         //Initializing String variable with null value
         str = "Happy Sunday!";
-        message = (str == null) ? "" : str.substring(0,2);
-        System.out.println(str);
+        message = (str == null) ? "" : str.substring(0,5);
+        System.out.println(message);
     }
 }

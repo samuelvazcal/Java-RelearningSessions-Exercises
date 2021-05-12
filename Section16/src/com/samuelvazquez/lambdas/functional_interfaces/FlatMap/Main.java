@@ -3,6 +3,7 @@ package src.com.samuelvazquez.lambdas.functional_interfaces.FlatMap;
 import org.w3c.dom.ls.LSOutput;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
@@ -38,7 +39,7 @@ public class Main {
 //            }
 //        });
 
-        list.stream().map(ppp2 -> ppp2.getList()).flatMap(ttt -> ttt.stream()).map(ttt2 -> ttt2.getCountry()).forEach(System.out::println);
+        list.stream().map(ppp2 -> ppp2.getList()).flatMap(Collection::stream).map(ttt2 -> ttt2.getCountry()).forEach(System.out::println);
     }
 }
 

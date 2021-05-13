@@ -161,6 +161,20 @@ public class StreamsMasterExample {
         List<Integer> evenNumbers = Stream.iterate(2,i -> i+2).limit(10).collect(Collectors.toList());
         System.out.println(evenNumbers);
 
+        //findAny()
+        //returns an Optional with any element of this stream
+        Optional<RichestPeople> findAnyNonParallel = list.stream().findAny();
+        Optional<RichestPeople> findAnyParallel = list.parallelStream().findAny();
+        System.out.println(findAnyNonParallel);
+        System.out.println(findAnyParallel);
+
+        //skip()
+        //used to skip the first 'n' elements from the given Stream
+        List<Integer> skipList = list.stream().map(x -> x.getAge()).skip(3).collect(Collectors.toList());
+        System.out.println(skipList);
+
+
+
     }
 
 

@@ -1,4 +1,4 @@
-package com.samuelvazquez;
+package com.samuelvazquez.debugging;
 
 public class Main2 {
     public static void main(String[] args) {

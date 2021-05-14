@@ -1,4 +1,4 @@
-package com.samuelvazquez;
+package com.samuelvazquez.debugging;
 
 public class Main {
 

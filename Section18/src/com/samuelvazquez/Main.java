@@ -9,6 +9,7 @@ public class Main {
 	    utils.addChar(sb,'a');
     }
         System.out.println(sb);
+        System.out.println(sb.length() * 2);
 
         String str = "abcdefg";
         String result = utils.upperAndPrefix(utils.addSuffix(str));

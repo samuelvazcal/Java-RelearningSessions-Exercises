@@ -18,20 +18,14 @@ public class PokemonJDBC2 {
             Statement statement = connection.createStatement();
             statement.execute("DROP TABLE IF EXISTS " + TABLE_FAVPOKEMON);
             statement.execute("CREATE TABLE IF NOT EXISTS " +  TABLE_FAVPOKEMON + "(" + COLUMN_ID + " INT," +  COLUMN_NAME + " VARCHAR(16))");
-            statement.execute("INSERT INTO " + TABLE_FAVPOKEMON + " (" + COLUMN_ID + ", " + COLUMN_NAME + ")" +
-                    "VALUES (25,'Pikachu')," + "(16,'Pidgey')," + "(58, 'Growlithe')");
-            statement.execute("INSERT INTO " + TABLE_FAVPOKEMON + "(" + COLUMN_ID + ", " + COLUMN_NAME + ")" +
-                    "VALUES" +
-                    "(43, 'Oddish')");
-            statement.execute("INSERT INTO " + TABLE_FAVPOKEMON + "(" + COLUMN_ID + ", " + COLUMN_NAME + ")" +
-                    "VALUES" +
-                    "(27,'Sandshrew')");
-            statement.execute("INSERT INTO " + TABLE_FAVPOKEMON + "(" + COLUMN_ID + ", " + COLUMN_NAME + ")" +
-                    "VALUES" +
-                    "(7,'Squirtle')");
-            statement.execute("INSERT INTO " + TABLE_FAVPOKEMON + "(" + COLUMN_ID + ", " + COLUMN_NAME + ")" +
-                    "VALUES" +
-                    "(132,'Weedle')");
+//            statement.execute("INSERT INTO " + TABLE_FAVPOKEMON + " (" + COLUMN_ID + ", " + COLUMN_NAME + ")" +
+//                    "VALUES (25,'Pikachu')," + "(16,'Pidgey')," + "(58, 'Growlithe')");
+            insertPokemon(statement,7,"Squirtle");
+            insertPokemon(statement,25,"Pikachu");
+            insertPokemon(statement,27,"Sandshrew");
+            insertPokemon(statement,58,"Growlithe");
+            insertPokemon(statement,16,"Pidgey");
+            insertPokemon(statement,43,"Oddish");
             statement.execute("UPDATE " + TABLE_FAVPOKEMON + " SET " + COLUMN_ID + " = 13" + " WHERE " + COLUMN_ID +
                     "=132");
             statement.execute("DELETE FROM " + TABLE_FAVPOKEMON + " WHERE " + COLUMN_ID + " = 13");
@@ -44,6 +38,29 @@ public class PokemonJDBC2 {
             connection.close();
         } catch(SQLException e) {
             System.out.println("Something went wrong: " + e.getMessage());
+            e.printStackTrace();
         }
     }
+
+    private static void insertPokemon(Statement statement, int id, String name) throws SQLException{
+        statement.execute("INSERT INTO " + TABLE_FAVPOKEMON + "(" + COLUMN_ID + ", " + COLUMN_NAME + ") " +
+                "VALUES(" + id + ", '" + name + "')");
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

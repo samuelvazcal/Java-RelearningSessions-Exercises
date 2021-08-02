@@ -29,7 +29,7 @@ public class MainExample {
         List<String> sortedResult = names.stream().sorted().collect(Collectors.toList());
         System.out.println(sortedResult);
 
-        //create a list of Integers
+        //create a list of Integersre
         List<Integer> numbers = Arrays.asList(2,3,4,5,6,7,2);
 
         //collect method returns a set

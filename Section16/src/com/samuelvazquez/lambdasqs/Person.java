@@ -82,6 +82,6 @@ public class Person {
                 ", lastName: '" + lastName + '\'' +
                 ", age: " + age +
                 ", email: '" + email + '\'' +
-                '}';
+                ", weight: " + weight;
     }
 }

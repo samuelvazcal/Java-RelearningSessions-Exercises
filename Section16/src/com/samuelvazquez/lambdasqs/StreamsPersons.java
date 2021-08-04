@@ -1,5 +1,6 @@
 package src.com.samuelvazquez.lambdasqs;
 
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.OptionalDouble;
@@ -61,5 +62,31 @@ public class StreamsPersons {
         OptionalDouble avgYears2 = list.stream().mapToInt(Person::getAge).average();
         if(avgYears2.isPresent()) System.out.println(avgYears2.getAsDouble());
         //System.out.println(avgYears2.getAsDouble());
+
+        System.out.println("\nOrdering by Last Name");
+        List<String> orderByLastName =
+                list.stream().map(Person::getLastName).sorted().collect(Collectors.toList());
+        orderByLastName.forEach(System.out::println);
+
+        System.out.println("\nOrdering by Last Name - All person info");
+        List<Person> orderByLastName2 =
+                list.stream().sorted(Comparator.comparing(Person::getLastName)).collect(Collectors.toList());
+        orderByLastName2.forEach(System.out::println);
+
+        System.out.println("\nAVG of all even ages (avg3)");
+        OptionalDouble avg2 = list.stream().mapToInt(Person::getAge).filter(f -> f%2==0).average();
+        if(avg2.isPresent()) System.out.println(avg2.getAsDouble());
+
+        System.out.println("\nEmails with more than 2 numbers inside of it");
+        List<String> emailList = list.stream().map(Person::getemail).filter(f -> {
+            int count = 0;
+            for(int i = 0; i < f.length(); i++) {
+                if((int)f.charAt(i)>=48 && (int)f.charAt(i)<=57) {
+                    count++;
+                }
+            }
+            return count>2;
+        }).collect(Collectors.toList());
+        emailList.forEach(System.out::println);
     }
 }
